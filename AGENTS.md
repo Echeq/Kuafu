@@ -10,7 +10,8 @@ Electron 外壳：在 Hyprland/Omarchy（以及任何带 StatusNotifier 托盘�
 - **显示名与内部名**：界面/文档显示名为 `Kuafu`（夸父）；但 `package.json` 的 `name` 保持 `quark-cloud` —— 用户数据目录（`~/.config/quark-cloud`）、单实例标识与登录会话都依赖它，改名会让所有用户需要重新扫码登录。不要改。（历史显示名：Quark Cloud → QuarkCloud for Linux → Kuafu，均已废弃。）
 
 ## 运行与验证
-- `bash run.sh` 是唯一的真实启动方式：优先系统 `electron43`，其次 `node_modules/`，并传入 `--ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3 --class=quark-cloud`。这些参数必须保留——Hyprland 窗口规则和中文输入法依赖它们。
+- `bash run.sh` 是唯一的真实启动方式：按 `electron43 → electron → electron39…electron36 → node_modules/` 顺序查找 Electron（兼容任意发行版），并传入 `--ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3 --class=quark-cloud`。这些参数必须保留——Hyprland 窗口规则和中文输入法依赖它们。
+- `INSTALL.md` 是面向所有发行版/桌面（Debian、Fedora、GNOME、KDE……）的中文安装教程；安装流程或依赖包名有变化时同步更新它。
 - `electron .` / `npm run dev` 会缺少 `--class` 和 IME 参数，只适合快速检查。`--dev` 参数是死代码，没有地方读取它。
 - `Ctrl+R`/`F5`/`F12` 作用于**站点视图**，不是标题栏。标题栏 HTML/CSS/JS 的改动需要重启应用（无热重载）。手动验证：运行、观察终端输出、使用 devtools。
 

@@ -25,8 +25,9 @@ find_electron() {
 if ! ELECTRON_BIN=$(find_electron); then
   cat >&2 <<'EOF'
 Error: Electron not found.
-  Option A) Install it through Omarchy:  omarchy pkg add electron43
+  Option A) Install it from your distro:   Arch: sudo pacman -S electron   |   Omarchy: omarchy pkg add electron43
   Option B) Install it locally in this project:  npm install
+  Full guide for all distributions: see INSTALL.md
 EOF
   exit 1
 fi

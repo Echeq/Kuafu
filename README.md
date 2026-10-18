@@ -70,7 +70,7 @@
 cd ~/Projects/kuafu
 
 # 2. 确保有 Electron（已装 electron43 可跳过）
-omarchy pkg add electron43      # 或：npm install
+omarchy pkg add electron43      # 或：npm install（各发行版详见 INSTALL.md）
 
 # 3. 注册桌面启动器与图标
 bash install.sh
@@ -78,6 +78,8 @@ bash install.sh
 # 4. 启动
 bash run.sh                     # 或 SUPER + SPACE 搜索 "Kuafu"
 ```
+
+> **不用 Omarchy？** Debian、Ubuntu、Fedora、openSUSE 与 GNOME、KDE、XFCE 等桌面的完整步骤（Node.js、国内镜像、托盘依赖）见 **[INSTALL.md](INSTALL.md)**。
 
 首次启动时用手机夸克 App 扫码登录。会话保存在 `~/.config/quark-cloud`，重启和升级都不受影响。
 
@@ -227,7 +229,7 @@ sequenceDiagram
 ## 导出到其他电脑
 
 ```bash
-bash package.sh          # → dist/Kuafu-1.2.0.tar.gz
+bash package.sh          # → dist/Kuafu-1.2.1.tar.gz
 ```
 
 目标电脑解压后运行 `bash install.sh` 即可；唯一的外部依赖是 Electron（见[系统要求](#系统要求)）。每台电脑需各自扫码登录，归档中**不包含任何账号数据**。
@@ -247,6 +249,8 @@ bash uninstall.sh --purge    # 同时删除 Cookie / 设置（~/.config/quark-cl
 
 ```
 kuafu/
+├── README.md           # 用户文档（中文）
+├── INSTALL.md          # 各发行版安装教程（非 Omarchy 用户看这个）
 ├── run.sh              # 启动器：自动寻找 Electron（系统或项目内）
 ├── install.sh          # 注册启动器 + 图标（指向本目录）
 ├── uninstall.sh        # 卸载（--purge 同时删除应用数据）

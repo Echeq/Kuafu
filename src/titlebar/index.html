@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'">
+  <title>Kuafu</title>
+  <link rel="stylesheet" href="titlebar.css">
+</head>
+<body>
+  <header id="bar">
+    <img id="logo" src="../../assets/quark-cloud-256.png" alt="">
+    <span class="brand">Kuafu</span>
+    <span id="ptitle">Loading…</span>
+    <nav id="actions">
+      <button id="back" title="Back (Alt+←)" disabled>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button id="forward" title="Forward (Alt+→)" disabled>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <button id="reload" title="Reload (Ctrl+R / F5)">
+        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+      </button>
+      <button id="dl" title="Download this folder (Ctrl+Shift+D)">
+        <svg viewBox="0 0 24 24"><path d="M12 4v10"/><polyline points="7 11 12 16 17 11"/><line x1="5" y1="19.5" x2="19" y2="19.5"/></svg>
+      </button>
+      <button id="min" title="Minimize to tray">
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <button id="close" title="Close to tray (Ctrl+W)">
+        <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </nav>
+  </header>
+  <script src="titlebar.js"></script>
+</body>
+</html>

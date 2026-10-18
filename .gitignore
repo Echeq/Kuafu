@@ -1,0 +1,22 @@
+# Dependencies (installed locally with `npm install`)
+node_modules/
+
+# Packaging/export artifacts
+dist/
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local Electron runtime data (lives in ~/.config/quark-cloud, never here)
+settings.json
+
+# Editor / OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/

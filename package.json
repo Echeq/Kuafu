@@ -1,0 +1,16 @@
+{
+  "name": "quark-cloud",
+  "version": "1.2.0",
+  "description": "夸父（Kuafu）— unofficial Linux desktop client (夸克网盘 / Quark Cloud): custom titlebar, tray, persistent session, folder downloads. Not affiliated with Quark.",
+  "main": "src/main.js",
+  "private": true,
+  "author": "echeq",
+  "license": "MIT",
+  "scripts": {
+    "start": "bash run.sh",
+    "dev": "electron . --dev"
+  },
+  "devDependencies": {
+    "electron": "^43.0.0"
+  }
+}

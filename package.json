@@ -4,7 +4,7 @@
   "description": "夸父（Kuafu）— unofficial Linux desktop client (夸克网盘 / Quark Cloud): custom titlebar, tray, persistent session, folder downloads. Not affiliated with Quark.",
   "main": "src/main.js",
   "private": true,
-  "author": "echeq",
+  "author": "Chen Qiu Elvis Enrique (echeq) <echeq@qq.com>",
   "license": "MIT",
   "scripts": {
     "start": "bash run.sh",
